@@ -1,6 +1,16 @@
-// This function checks whether given a volume and a side, whether the shape is a perfect cube.
-// First, I checked whether any arguemnts are invalid.
-// Then, I checked whether the side cubed was equal to the volume.
+/* Parameters, returns, examples
+- Given a volume and side, check whether the shape is a perfect cube
+- Return true or false
+- (27, 3) returns true
+  (-8, 2) returns false
+  (100, 6) returns false
+*/
+
+/* Pseudocode walkthrough
+- Check whether either parameter is negative, which would make the shape invalid and return false
+- Else, check whether the side cubed is equal to the volume (as a cube is)
+- Else, return false
+*/
 
 var cubeChecker = function(volume, side) {
   if (volume <= 0 || side <= 0) {
@@ -12,7 +22,6 @@ var cubeChecker = function(volume, side) {
   }
 };
 
-// I used a simple set of conditions to do this one. If I were to do it again, I would:
-  // Use a ternary to compact the else-if and else statements.
-  // Try working backwards by cube rooting the volume.
-  // Find a way to build error check into the basic logic.
+/* Reflection
+- Could have used ternary to compact conditionals, perhaps a nested ternary
+*/
